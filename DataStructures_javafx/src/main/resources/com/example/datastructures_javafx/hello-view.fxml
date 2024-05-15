@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datastructures_javafx.HelloController">
+    <tabs>
+        <Tab text="List">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Button layoutX="207.0" layoutY="92.0" mnemonicParsing="false" onAction="#agregarAL" text="Agregar" />
+                        <Label layoutX="48.0" layoutY="26.0" text="Interfaz list" />
+                        <TextField fx:id="txt_dato" layoutX="40.0" layoutY="92.0" promptText="Introduce un dato" />
+                        <TextArea fx:id="area_datos" layoutX="27.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button layoutX="293.0" layoutY="92.0" mnemonicParsing="false" onAction="#mostrarAL" text="Mostrar" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Set">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Button layoutX="207.0" layoutY="92.0" mnemonicParsing="false" onAction="#agregarSet" text="Agregar" />
+                        <Label layoutX="48.0" layoutY="26.0" text="Interfaz set" />
+                        <TextField fx:id="txt_dato_set" layoutX="40.0" layoutY="92.0" promptText="Introduce un dato" />
+                        <TextArea fx:id="area_datos_set" layoutX="27.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0" onMouseClicked="#handleSetClick" />
+                        <Button layoutX="293.0" layoutY="92.0" mnemonicParsing="false" onAction="#mostrarSet" text="Mostrar" />
+                        <Button layoutX="373.0" layoutY="92.0" mnemonicParsing="false" onAction="#ordenarSetMostrado" text="Ordenar Alfabeticamente" />
+                        <Label fx:id="lbl_count_set" layoutX="27.0" layoutY="370.0" text="Número de elementos: 0" />
+                        <Label fx:id="lbl_date_time" layoutX="27.0" layoutY="400.0" text="Fecha y hora: " />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Map">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <ComboBox fx:id="comboJugadores" layoutX="40.0" layoutY="50.0" prefWidth="150.0" promptText="Selecciona un jugador" />
+                        <TextField fx:id="txtGoles" layoutX="40.0" layoutY="100.0" promptText="Número de goles" />
+                        <Button layoutX="40.0" layoutY="150.0" mnemonicParsing="false" onAction="#agregarGoles" text="Agregar Goles" />
+                        <Button fx:id="btnClasificacion" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" onAction="#mostrarClasificacion" text="Clasificación" />
+                        <Label fx:id="lbl_jornada" layoutX="40.0" layoutY="250.0" text="Jornada: " />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
